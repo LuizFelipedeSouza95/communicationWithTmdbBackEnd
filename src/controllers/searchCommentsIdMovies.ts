@@ -11,7 +11,7 @@ export class searchCommentsIdmovies {
   async searchCommentsIdmovies(req: Request, res: Response) {
     const { idMovie } = req.query;
     const content = await readFile();
-    
+
     const getIds = async () => {
       const ids = content.filter((id) => id.idMovie === idMovie);
       return ids;
@@ -19,7 +19,7 @@ export class searchCommentsIdmovies {
 
     const searchComment = await getIds();
 
-    searchComment.sort((a, b) => (a.createdAt > b.createdAt) ? -1 : 1);
+    searchComment.sort((a, b) => (a.createdAt > b.createdAt ? -1 : 1));
 
     if (idMovie == null) {
       return res.status(404).json("You need to pass two Comment");

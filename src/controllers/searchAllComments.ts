@@ -10,10 +10,11 @@ const readFile = async () => {
 export class searchAllComments {
   async searchAllComments(req: Request, res: Response) {
     const content = await readFile();
-    const ordered_comments = content.sort((a, b) => (a.createdAt > b.createdAt) ? -1 : 1);  
+    const ordered_comments = content.sort((a, b) =>
+      a.createdAt > b.createdAt ? -1 : 1
+    );
     return ordered_comments.length > 0
       ? res.status(200).json(content)
       : res.status(204).send();
   }
-  
 }
