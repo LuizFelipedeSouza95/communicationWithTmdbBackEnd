@@ -1,10 +1,10 @@
 import express from "express";
-import { searchMovies } from "./controllers/searchAllMoviesSelect";
-import { searchMovieId } from "./controllers/searchMovieId";
-import { createComents } from "./controllers/createComments";
-import { searchAllComments } from "./controllers/searchAllComments";
-import { searchCommentsIdmovies } from "./controllers/searchCommentsIdMovies";
-import { destroyComments } from "./controllers/destroyComments";
+import { searchMovies } from "./controllerMovies/searchAllMoviesSelect";
+import { searchMovieId } from "./controllerMovies/searchMovieId";
+import { createComents } from "./controllerComments/createComments";
+import { searchAllComments } from "./controllerComments/searchAllComments";
+import { searchCommentsIdmovies } from "./controllerComments/searchCommentsIdMovies";
+import { destroyComments } from "./controllerComments/destroyComments";
 import { serve, setup } from "swagger-ui-express";
 import * as swagger from "./swagger.json";
 

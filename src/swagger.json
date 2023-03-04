@@ -302,7 +302,7 @@
                                 "type": "object",
                                 "properties": {
                                     "idMovie": {
-                                        "type": "string"
+                                        "type": "number"
                                     },
                                     "name": {
                                         "type": "string"
@@ -332,7 +332,7 @@
                                             "type": "integer"
                                         },
                                         "idMovie": {
-                                            "type": "string"
+                                            "type": "number"
                                         },
                                         "name": {
                                             "type": "string"
