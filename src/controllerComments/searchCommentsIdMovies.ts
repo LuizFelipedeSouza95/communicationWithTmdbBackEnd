@@ -3,7 +3,7 @@ import { prismaClient } from "../model/prismaClient";
 export class searchCommentsIdmovies {
   async searchCommentsIdmovies(req: Request, res: Response) {
     const idMovie: string = req.query.idMovie as string;
-    const comment = await prismaClient.comments.findFirst({
+    const comment = await prismaClient.comments.findMany({
       where: {
         idMovie: parseInt(idMovie),
       },
